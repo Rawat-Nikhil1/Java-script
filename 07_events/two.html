@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nikhil Rawat</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+
+    // setInterval(function(){
+    //     console.log("Nikhil");     
+    // }, 2000)
+
+    // setTimeOut(function(){
+    //     console.log("Nikhil");     
+    // }, 2000) OR
+
+    // const sayNikhil = function(){
+    //     console.log("Nikhil")
+    // }
+    // setTimeout(sayNikhil, 2000)
+
+
+    const changeME = setTimeout(function(){
+        document.querySelector('h1').innerHTML = "My name is Nikhil"
+    },3000)
+
+    const btn = document.querySelector('button')
+    btn.addEventListener('click',function(){
+        clearTimeout(changeME)
+        console.log("stopped")
+    },false)
+    
+
+
+</script>
+</html>
